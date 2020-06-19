@@ -9,7 +9,7 @@ module.exports = {
     filename: 'assets/js/app.js'
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.sass', '.styl']
   },
   module: {
     rules: [
@@ -48,12 +48,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(svg|.png|.gif|.jpg)/,
+        test: /\.(svg|png|gif|jpg)/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/imgs/[name].[ext]'
+              name: '[name].[ext]',
+              publicPath: '/assets/images',
+              outputPath: 'assets/images'
             }
           }
         ]

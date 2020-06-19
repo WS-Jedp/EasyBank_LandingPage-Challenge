@@ -1,0 +1,26 @@
+
+
+:root {
+  font-size: 62.5%;
+  --color-main:  hsl(233, 26%, 24%);
+  --color-secondary: hsl(136, 65%, 51%);
+  --color-third:  hsl(192, 70%, 51%);
+  --color-white:  hsl(0, 0%, 100%);
+  --color-gray: hsl(233, 8%, 62%);
+  --color-grayish: hsl(220, 16%, 96%);
+  --color-light: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --space-big: 6.4rem;
+  --space-medium: 2.7rem;
+  --space-normal: 1.2rem;
+  --space-small: 0.6rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.8rem;
+}
