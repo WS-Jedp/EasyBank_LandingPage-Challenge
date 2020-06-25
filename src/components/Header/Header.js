@@ -7,6 +7,27 @@ import '../MenuResponsive/MenuResponsive';
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+
+#MainContentBtn {
+  position: absolute;
+  left: -50%;
+  top: 12px;
+  padding: var(--space-normal);
+  color: var(--color-main);
+  text-decoration: none;
+  background: linear-gradient(90deg, hsl(136, 65%, 70%) 0%, hsl(136, 65%, 70%) 25%, hsl(192, 70%, 80%) 100%);
+  transition: 0.3s ease-in-out;
+}
+
+#MainContentBtn:focus {
+  left: 12px;
+}
+
+header * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header *{
   margin: 0;
   padding: 0;
@@ -14,12 +35,11 @@ template.innerHTML = `
 }
 .header {
   position: sticky;
-  box-sizing: border-box;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
   box-sizing: border-box;
+  top: 0;
   min-width: 100%;
   width: 100%;
   max-width: 100%;
@@ -43,6 +63,10 @@ template.innerHTML = `
   color: var(--color-gray);
   cursor: pointer;
   transition: 0.3s ease-in-out;
+}
+.header nav ul li a{
+  color: var(--color-gray);
+  text-decoration: none;
 }
 .header nav ul li::after {
   content: '';
@@ -93,14 +117,15 @@ template.innerHTML = `
 </style>
 
 <header class='header'>
+  <a id="MainContentBtn" href="#MainContent">Skip Content</a>
   <easy-bank-logo></easy-bank-logo>
   <nav>
     <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
-      <li>Blog</li>
-      <li>Careers</li>
+      <li aria-label="Go to Home Page"><a href="#">Home</a></li>
+      <li aria-label="Go to About Page"><a href="#">About </a></li>
+      <li aria-label="Go to Conctact page"><a href="#">Contact</a></li>
+      <li aria-label="Go To Blog page"><a href="#">Blog</a></li>
+      <li aria-label="Go to Carreers Page"><a href="#">Careers</a></li>
     </ul>
   </nav>
   <div class="header__button">
@@ -122,6 +147,7 @@ class myHeader extends HTMLElement {
   }
 
   connectedCallback(){
+
   }
 
 }

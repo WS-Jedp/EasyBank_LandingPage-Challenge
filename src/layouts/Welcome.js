@@ -110,7 +110,7 @@ template.innerHTML = `
     </div>
 
     <figure class="welcome__images">
-      <img id="picture" />
+      <img id="picture" alt="Phones and mobile computers for easyBank"/>
     </figure>
   </section>
 `;

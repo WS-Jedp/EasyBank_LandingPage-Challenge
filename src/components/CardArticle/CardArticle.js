@@ -19,6 +19,13 @@ template.innerHTML = `
       background-color: var(--color-white);
     }
 
+    .article button {
+      margin: 0; 
+      padding: 0;
+      border: none;
+      background: none;
+    }
+
     .article__image{
       position: realtive;
       width: 100%;
@@ -73,14 +80,16 @@ template.innerHTML = `
   </style>
 
   <article class="article">
-    <figure class="article__image">
-      <img id="imgArt" />
-    </figure>
-    <div class="article__content">
-      <span id="author"></span>
-      <h2 id="title"><h2>
-      <p id="description"><p>
-    </div>
+    <button>
+      <figure class="article__image">
+        <img id="imgArt" />
+      </figure>
+      <div class="article__content">
+        <span id="author"></span>
+        <h2 id="title"><h2>
+        <p id="description"><p>
+      </div>
+    </button>
   </article>
 `
 
@@ -92,6 +101,7 @@ class CardArticle extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     this.shadowRoot.getElementById('imgArt').src = this.getAttribute('src');
+    this.shadowRoot.getElementById('imgArt').alt = this.getAttribute('title');
     this.shadowRoot.getElementById('author').innerText = this.getAttribute('author');
     this.shadowRoot.getElementById('title').innerText = this.getAttribute('title');
     this.shadowRoot.getElementById('description').innerText = this.getAttribute('description');

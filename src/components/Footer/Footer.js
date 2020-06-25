@@ -66,6 +66,11 @@ template.innerHTML = `
       color: var(--color-secondary);
     }
 
+    .footer__nav ul li a {
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
     .footer__copyright{
       position: absolute;
       right: var(--space-big);
@@ -123,25 +128,35 @@ template.innerHTML = `
     <addres class="footer__social-media">
       <easy-bank-logo color="#fff";"></easy-bank-logo>
       <div class="footer__social-icons">
-        <easy-bank-icon-facebook></easy-bank-icon-facebook>
-        <easy-bank-icon-youtube></easy-bank-icon-youtube>
-        <easy-bank-icon-twitter></easy-bank-icon-twitter>
-        <easy-bank-icon-pinterest></easy-bank-icon-pinterest>
-        <easy-bank-icon-instagram></easy-bank-icon-instagram>
+        <a href="#">
+          <easy-bank-icon-facebook></easy-bank-icon-facebook>
+        </a>
+        <a href="#">
+          <easy-bank-icon-youtube></easy-bank-icon-youtube>
+        </a>
+        <a href="#">
+          <easy-bank-icon-twitter></easy-bank-icon-twitter>
+        </a>
+        <a href="#">
+          <easy-bank-icon-pinterest></easy-bank-icon-pinterest>
+        </a>
+        <a href="#">
+          <easy-bank-icon-instagram></easy-bank-icon-instagram>
+        </a>
       </div>
     </addres>
 
     <div class="footer__nav">
       <ul>
-       <li>About Us</li> 
-       <li>Contact</li> 
-       <li>Blog</li> 
+       <li><a href="#">About Us</a></li> 
+       <li><a href="#">Contact</a></li> 
+       <li><a href="#">Blog</a></li> 
       </ul>
 
       <ul>
-       <li>Careers</li> 
-       <li>Support</li> 
-       <li>Privacy Policy</li> 
+       <li><a href="#">Careers</a></li> 
+       <li><a href="#">Support</a></li> 
+       <li><a href="#">Privacy Policy</a></li> 
       </ul>
     </div>
 

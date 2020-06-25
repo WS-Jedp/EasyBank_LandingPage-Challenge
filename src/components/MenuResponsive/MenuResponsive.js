@@ -38,6 +38,11 @@ template.innerHTML = `
       transition: 0.3s ease-in-out;
       text-align: center;
     }
+
+    .menu-responsive__nav ul li a{
+      text-decoration: none;
+      color: var(--color-main);
+    }
     
     .menu-responsive__nav ul li:hover{
       color: var(--color-secondary);
@@ -50,11 +55,11 @@ template.innerHTML = `
   <section class="menu-responsive">
     <article class="menu-responsive__nav">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Blog</li>
-        <li>Careers</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
       </ul>
     </article>
   </section>
