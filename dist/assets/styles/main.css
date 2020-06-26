@@ -1,0 +1,109 @@
+
+
+:root {
+  font-size: 62.5%;
+  --color-main:  hsl(233, 26%, 24%);
+  --color-secondary: hsl(136, 65%, 51%);
+  --color-third:  hsl(192, 70%, 51%);
+  --color-white:  hsl(0, 0%, 100%);
+  --color-gray: hsl(233, 8%, 62%);
+  --color-grayish: hsl(220, 16%, 96%);
+  --color-light: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --space-big: 6.4rem;
+  --space-medium: 2.7rem;
+  --space-normal: 1.2rem;
+  --space-small: 0.6rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.8rem;
+}
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  width: 100vw;
+  height: 60px;
+  padding: space_small;
+  -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.header nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+.header nav ul li {
+  position: relative;
+  padding: space_small;
+  font-size: 1.5rem;
+  color: color_grayish;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.header nav ul li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), color-stop(40%, #31d35c), to(#2bb7da));
+  background: linear-gradient(90deg, #31d35c 0%, #31d35c 40%, #2bb7da 100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.header nav ul li:hover {
+  color: color_main;
+}
+.header nav ul li:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  opacity: 1;
+}
+.header__menu-responsive {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  .header nav ul {
+    display: none;
+  }
+  .header .header__button {
+    display: none;
+  }
+  .header__menu-responsive {
+    display: inline;
+  }
+}
+
