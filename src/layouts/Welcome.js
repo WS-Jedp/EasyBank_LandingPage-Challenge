@@ -32,7 +32,7 @@ template.innerHTML = `
       flex-flow: column nowrap;
       align-items: flex-start;
       justify-content: center;
-      min-width: 368px;
+      min-width: 340px;
       width: 50%;
       max-width: 50%;
       height: 100%;
