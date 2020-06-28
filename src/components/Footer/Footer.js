@@ -122,6 +122,12 @@ template.innerHTML = `
         justify-content: center;
       }
     }
+
+    @media screen and (max-width: 400px){
+      .footer {
+        padding: var(--space-medium);
+      }
+    }
   </style>
 
   <footer class="footer">

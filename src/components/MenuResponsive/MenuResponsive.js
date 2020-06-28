@@ -5,17 +5,16 @@ template.innerHTML = `
       position: absolute;
       display: flex;
       justify-content: center;
-      top: 20px;
-      left: 0;
-      rigth: 0;
       width: 100%;
       height: 100vh;
       background: rgb(255,255,255);
       background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5158438375350141) 50%, rgba(0,0,0,0.5018382352941176) 100%);
-      z-index: -1;
+      z-index: 999;
+      overflow: hidden;
     }
 
     .menu-responsive__nav{
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;

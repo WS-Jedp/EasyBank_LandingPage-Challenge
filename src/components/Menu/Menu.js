@@ -5,22 +5,23 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     .menu__responsive-nav{
-      position: absolute;
+      position: fixed;
+      top: 60px;
       width: 100%;
       height: 100vh;
       right: -100%;
       transition: 0.3s ease-in-out;
+      z-index: 999;
     }
+    
   </style>
-  <div>
     <div id="menu__easy-bank" tabindex="0">
       <svg  aria-label="Menu of easy bank" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="24" height="11"><g fill="#2D314D" fill-rule="evenodd"><path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/></g></svg>
     </div>
-
+    
     <div class="menu__responsive-nav" id="menu__nav" aria-hidden="true" aria-live="assertive">
       <easy-bank-menu-responsive></easy-bank-menu-responsive>
     </div>
-  </div>
 `
 
 class EasyBankMenu extends HTMLElement {

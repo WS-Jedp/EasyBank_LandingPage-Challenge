@@ -55,7 +55,7 @@ template.innerHTML = `
 
     .welcome__images{
       position: relative;
-      min-width: 368px;
+      min-width: 350px;
       width: 50%;
       max-width: 50%;
       height: 100%;

@@ -24,3 +24,7 @@
   font-family: 'Public Sans', sans-serif;
   font-size: 1.8rem;
 }
+
+#main-content{
+  z-index: 1;
+}

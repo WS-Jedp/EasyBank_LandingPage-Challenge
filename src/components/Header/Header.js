@@ -33,13 +33,15 @@ header * {
   padding: 0;
   box-sizing: border-box;
 }
+
+
 .header {
   position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
   box-sizing: border-box;
-  top: 0;
   min-width: 100%;
   width: 100%;
   max-width: 100%;
@@ -48,6 +50,7 @@ header * {
   background-color: var(--color-white);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   z-index: 99;
+  overflow: hidden;
 }
 .header nav ul {
   position: relative;
@@ -93,9 +96,6 @@ header * {
   cursor: pointer;
 }
 
-.header__menu-responsive-nav{
-  display: none;
-}
 @media screen and (max-width: 768px) {
   .header {
     justify-content: space-around;
@@ -109,10 +109,7 @@ header * {
   .header__menu-responsive {
     display: inline;
   }
-  .header__menu-responsive-nav{
-    right: -100%;
-    display: block;
-  }
+
 }
 </style>
 
@@ -132,11 +129,11 @@ header * {
     <easy-bank-button title="Request Invite">
     </easy-bank-button>
   </div>
+  
   <div class="header__menu-responsive">
     <easy-bank-menu></easy-bank-menu> 
   </div>
-
-<header>
+  <header>
 `;
 
 class myHeader extends HTMLElement {
