@@ -25,6 +25,11 @@
   font-family: 'Public Sans', sans-serif;
   font-size: 1.8rem;
 }
+
+#main-content___2dhQo{
+  z-index: 1;
+}
+
 .header {
   position: relative;
   display: -webkit-box;
